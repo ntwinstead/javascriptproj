@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assignment-4.css">
+    <title>Assignment 4</title>
+    <script defer src="app.js"></script>
+    <!-- Added a script to animate the pictures and text. -->
+</head>
+
+<body>
+    <div>
+        <img src="ass3logo.png" alt="My logo" class="responsive">
+        <h1 class="fancy">The Best Christmas Boutique!</h1>
+        <script>
+            const text = document.querySelector(".fancy");
+            const strText = text.textContent;
+            const splitText = strText.split("");
+
+            text.textContent="";
+            for (let i = 0; i < splitText.length; i++) {
+                text.innerHTML += "<span>" + splitText[i] + "</span>";
+            }
+
+            let char = 0;
+            let timer = setInterval(onTick, 50);
+
+            function onTick(){
+                const span = text.querySelectorAll('span')[char];
+                span.classList.add('fade');
+                char++
+                if(char === splitText.length){
+                    complete();
+                    return;
+                }
+            }
+
+            function complete(){
+            clearInterval(timer);
+            timer = null;
+            }
+        </script>
+    </div>
+<!-- this is the navigation bar that goes to different pages on the site -->
+    <div class="Navigation">
+        <a href="#Jeans" class="Navigation">Jeans</a>
+        <a href="#Shirts" class="Navigation">Shirts</a>
+        <a href="#Accessories" class="Navigation">Accessories</a>
+        <a href="#Sweaters" class="Navigation">Sweaters</a>
+        <a href="#Shoes" class="Navigation">Shoes</a>
+        <a href="#Hats" class="Navigation">Hats</a>
+    </div>
+
+    <script>
+        let d = new Date();
+        alert("Today's date is " + d);
+    </script>
+<!-- Added different sections for pictures and a description of what they are (different places in the store) -->
+    <img src="christmas.png" class="decor">
+    <div class="hidden">
+        <h2 id="Jeans">Jeans</h2>
+        <img src="jeans.png" alt="jean pic" class="responsive">
+    </div>
+    <img src="christmas.png" class="decor">
+
+    <div class="hidden">
+        <h2 id="Shirts">Shirts</h2>
+        <img src="shirt.png" alt="shirt pic" class="responsive">
+    </div>
+    <img src="christmas.png" class="decor">
+
+    <div class="hidden">
+        <h2 id="Accessories">Accessories</h2>
+        <img src="watch.png" alt="watch pic" class="responsive">
+    </div>
+    <img src="christmas.png" class="decor">
+<!-- Places christmas.png outside of the div that way it wouldn't be affected by the javascript. -->
+    <div class="hidden">
+        <h2 id="Sweaters">Sweaters</h2>
+        <img src="sweater.png" alt="sweater pic" class="responsive">
+    </div>
+    <img src="christmas.png" class="decor">
+
+    <div class="hidden">
+        <h2 id="Shoes">Shoes</h2>
+        <img src="shoes.png" alt="shoes pic" class="responsive">
+    </div>
+    <img src="christmas.png" class="decor">
+
+    <div class="hidden">
+        <h2 id="Hats">Hats</h2>
+        <img src="hat.png" alt="hat pic" class="responsive">
+    </div>
+    <img src="christmas.png" class="decor">
+
+    <div>
+        <br>
+        <a href="index.html">Assignment 1</a>
+    </div>
+</body>
+
+</html>

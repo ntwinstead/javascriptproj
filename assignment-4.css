@@ -1,0 +1,63 @@
+.responsive {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.decor {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+h1{
+  color: rgb(0, 0, 0);
+  font-size: 4.5vw;
+  text-align: center;
+  font-family: 'Times New Roman'
+}
+
+span{
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+span.fade{
+  opacity: 1
+}
+
+h2 {
+  text-align: center;
+  font-size: 3vw;
+  font-family:'Times New Roman', Times, serif
+}
+
+.Navigation {
+  text-align: center;
+  font-size: 2vw;
+}
+
+a:hover {
+  color: rgb(153, 0, 255)
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
